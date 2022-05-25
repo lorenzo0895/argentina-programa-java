@@ -1,12 +1,8 @@
 package com.argProgramaSpallione.ArgentinaPrograma.Entities;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,19 +17,22 @@ public class User {
   private String surname;
   private String profile_image;
   private String landing_image;
+  private String title;
+  private String description;
   private String username;
   private String password;
 
   public User() {
   }
 
-
-  public User(String id, String name, String surname, String profile_image, String landing_image, String username, String password) {
+  public User(String id, String name, String surname, String profile_image, String landing_image, String title, String description, String username, String password) {
     this.id = id;
     this.name = name;
     this.surname = surname;
     this.profile_image = profile_image;
     this.landing_image = landing_image;
+    this.title = title;
+    this.description = description;
     this.username = username;
     this.password = password;
   }
@@ -78,6 +77,22 @@ public class User {
     this.landing_image = landing_image;
   }
 
+  public String getTitle() {
+    return this.title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
   public String getUsername() {
     return this.username;
   }
@@ -102,9 +117,12 @@ public class User {
       ", surname='" + getSurname() + "'" +
       ", profile_image='" + getProfile_image() + "'" +
       ", landing_image='" + getLanding_image() + "'" +
+      ", title='" + getTitle() + "'" +
+      ", description='" + getDescription() + "'" +
       ", username='" + getUsername() + "'" +
       ", password='" + getPassword() + "'" +
       "}";
   }
+
   
 }

@@ -3,7 +3,6 @@ package com.argProgramaSpallione.ArgentinaPrograma.Entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -17,8 +16,6 @@ public class Project {
   private String name;
   private String description;
   private String uri;
-  @ManyToOne()
-  private User user;
 
   public Project() {
   }
@@ -28,7 +25,6 @@ public class Project {
     this.name = name;
     this.description = description;
     this.uri = uri;
-    this.user = user;
   }
 
   public String getId() {
@@ -63,12 +59,4 @@ public class Project {
     this.uri = uri;
   }
 
-  public User getUser() {
-    return this.user;
-  }
-
-  public void setUser(User user) {
-    this.user = user;
-  }
-  
 }
