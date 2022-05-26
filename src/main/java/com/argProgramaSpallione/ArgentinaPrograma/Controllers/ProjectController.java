@@ -42,8 +42,8 @@ public class ProjectController {
   @ResponseBody
   public IResponse getProjectById(@PathVariable String id) {
     try {
-      Project eduction = projectService.getOne(id);
-      return new IResponse<Project>(eduction);
+      Project project = projectService.getOne(id);
+      return new IResponse<Project>(project);
     } catch (Exception exception) {
       return new IResponse<IException>(new IException(exception.getMessage()));
     }

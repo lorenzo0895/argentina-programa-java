@@ -6,7 +6,6 @@ import com.argProgramaSpallione.ArgentinaPrograma.Entities.Skill;
 import com.argProgramaSpallione.ArgentinaPrograma.Responses.IException;
 import com.argProgramaSpallione.ArgentinaPrograma.Responses.IResponse;
 import com.argProgramaSpallione.ArgentinaPrograma.Services.SkillService;
-import com.argProgramaSpallione.ArgentinaPrograma.Services.SkillService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
